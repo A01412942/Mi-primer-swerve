@@ -21,6 +21,9 @@ import com.kauailabs.navx.frc.*;
 import com.pathplanner.lib.auto.AutoBuilder;
 //hola
 //prueba
+import com.pathplanner.lib.util.HolonomicPathFollowerConfig;
+import com.pathplanner.lib.util.PIDConstants;
+import com.pathplanner.lib.util.ReplanningConfig;
 
 public class Chassis extends SubsystemBase{
 
@@ -47,7 +50,7 @@ public class Chassis extends SubsystemBase{
         rearLeft = new Module(0, 0, 0, 0, 0, 0);
         rearRight = new Module(0, 0, 0, 0, 0, 0);
 
-        AutoBuilder.configureHolonomic(this::getPose2d, this::set0doPose, this::getChassisSpeeds, null, null, null, null);
+        AutoBuilder.configureHolonomic(this::getPose2d, this::set0doPose, this::getChassisSpeeds, null, new HolonomicPathFollowerConfig(new PIDConstants(Constants.Chassis.driveKp, Constants.Chassis.driveKi, Constants.Chassis.driveKd), new PIDConstants(Constants.Chassis.rotationKp, Constants.Chassis.rotationKi, Constants.Chassis.rotationKd), Constants.Chassis.maxSpeed, Constants.Chassis.robotRadius, new ReplanningConfig()), null, null); //ver documentación de replanning config
     }
     //Chassis speed se manda a la kinemática y ahpi se divide entre los modulos
     //la cinemática ya sabe donde estan los modulos, entonces toma la velocudiad resultante del chassis y crea una lista de estados que está en el mismo orden de como se delcaró en las "kinematics"
