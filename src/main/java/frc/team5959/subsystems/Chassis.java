@@ -19,7 +19,7 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 import com.kauailabs.navx.frc.*;
 import com.pathplanner.lib.auto.AutoBuilder;
-
+//hola
 //prueba
 
 public class Chassis extends SubsystemBase{
@@ -38,7 +38,7 @@ public class Chassis extends SubsystemBase{
     SwerveDriveOdometry odometry = new SwerveDriveOdometry(kinematics, getRotation2d(), positions, new Pose2d(0, 0, getRotation2d()));
 
     SwerveDrivePoseEstimator poseEstimator;
-    AHRS navx = new AHRS(SPI.Port.kMXP);
+    AHRS navx = new AHRS(SPI.Port.kMXP); //gyro
 
     public Chassis(){
 
