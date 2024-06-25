@@ -18,12 +18,6 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 import com.kauailabs.navx.frc.*;
-import com.pathplanner.lib.auto.AutoBuilder;
-//hola
-//prueba
-import com.pathplanner.lib.util.HolonomicPathFollowerConfig;
-import com.pathplanner.lib.util.PIDConstants;
-import com.pathplanner.lib.util.ReplanningConfig;
 
 public class Chassis extends SubsystemBase{
 
@@ -45,12 +39,11 @@ public class Chassis extends SubsystemBase{
 
     public Chassis(){
 
-        frontLeft = new Module(0, 0, 0, 0, 0, 0); //parametros a cambiar
-        frontRight = new Module(0, 0, 0, 0, 0, 0);
-        rearLeft = new Module(0, 0, 0, 0, 0, 0);
-        rearRight = new Module(0, 0, 0, 0, 0, 0);
-
-        AutoBuilder.configureHolonomic(this::getPose2d, this::set0doPose, this::getChassisSpeeds, null, new HolonomicPathFollowerConfig(new PIDConstants(Constants.Chassis.driveKp, Constants.Chassis.driveKi, Constants.Chassis.driveKd), new PIDConstants(Constants.Chassis.rotationKp, Constants.Chassis.rotationKi, Constants.Chassis.rotationKd), Constants.Chassis.maxSpeed, Constants.Chassis.robotRadius, new ReplanningConfig()), null, null); //ver documentación de replanning config
+        frontLeft = new Module(Constants.Chassis.frontLeftDriveMotorPort, Constants.Chassis.frontLeftRotationMotorPort, Constants.Chassis.frontLeftCANcoderPort, Constants.Chassis.frontLeftKp, Constants.Chassis.frontLeftKi, Constants.Chassis.frontLeftKd); //parametros a cambiar
+        frontRight = new Module(Constants.Chassis.frontRightDriveMotorPort, Constants.Chassis.frontRightRotationMotorPort, Constants.Chassis.frontRightCANcoderPort, Constants.Chassis.frontRightKp, Constants.Chassis.frontRightKi, Constants.Chassis.frontRightKd);
+        rearLeft = new Module(Constants.Chassis.rearLeftDriveMotorPort, Constants.Chassis.rearLeftRotationMotorPort, Constants.Chassis.rearLeftCANcoderPort, Constants.Chassis.rearLeftKp, Constants.Chassis.rearLeftKi, Constants.Chassis.rearLeftKd);
+        rearRight = new Module(Constants.Chassis.rearRightDriveMotorPort, Constants.Chassis.rearRightRotationMotorPort, Constants.Chassis.rearRightCANcoderPort, Constants.Chassis.rearRightKp, Constants.Chassis.rearRightKi, Constants.Chassis.rearRightKd);
+        
     }
     //Chassis speed se manda a la kinemática y ahpi se divide entre los modulos
     //la cinemática ya sabe donde estan los modulos, entonces toma la velocudiad resultante del chassis y crea una lista de estados que está en el mismo orden de como se delcaró en las "kinematics"

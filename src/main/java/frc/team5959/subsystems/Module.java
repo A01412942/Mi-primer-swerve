@@ -56,7 +56,7 @@ public class Module {
         
         position = driveMotor.getEncoder().getPosition();
 
-        position *= Constants.Chassis.driveRevsToMeters; //transformar dependiendo de la trnasmision que tenemos
+        position *= Constants.Module.driveRevsToMeters; //transformar dependiendo de la trnasmision que tenemos
         
         return position;
     }
