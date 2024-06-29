@@ -80,7 +80,7 @@ public class Constants {
     }
     public static class Module{
         
-        public static final double driveRevsToMeters = 4 * Math.PI / (29.27 * 8.14) * 1.98; //revoluciones a metros (cyberius)
+        public static final double driveRevsToMeters = 4 * Math.PI / (29.27 * 8.14) * 1.98; //revoluciones a metros (pendiente cambiar a la de nosotros)
     }
 
 
