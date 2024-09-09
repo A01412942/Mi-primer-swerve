@@ -27,17 +27,17 @@ public class Constants {
         public static final double robotRadius = 0.66; //metros, cambiar a elección
 
         //Modulos 
-        public static final double frontLeftTranslationX = -0.5;
-        public static final double frontLeftTranslationY = 0.5;
+        public static final double frontLeftTranslationX = -0.301625; //((29 in/2) - 2.625in)*0.0254 = 0.301625 metros
+        public static final double frontLeftTranslationY = 0.301625;
 
-        public static final double frontRightTranslationX = 0.5;
-        public static final double frontRightTranslationY = 0.5;
+        public static final double frontRightTranslationX = 0.301625;
+        public static final double frontRightTranslationY = 0.301625;
 
-        public static final double rearLeftTranslationX = -0.5;
-        public static final double rearLeftTranslationY = -0.5;
+        public static final double rearLeftTranslationX = -0.301625;
+        public static final double rearLeftTranslationY = -0.301625;
 
-        public static final double rearRightTranslationX = 0.5;
-        public static final double rearRightTranslationY = -0.5;
+        public static final double rearRightTranslationX = 0.301625;
+        public static final double rearRightTranslationY = -0.301625;
     
         public static final int frontLeftDriveMotorPort = 3;
         public static final int frontRightDriveMotorPort = 5;
@@ -78,6 +78,20 @@ public class Constants {
         public static final double rotationKi = 0.0;
         public static final double rotationKd = 0.0;
     }
+    
+    public static class Auto {
+
+        public static final double autoDriveP = 0.0;
+        public static final double autoDriveI= 0.0;
+        public static final double autoDriveD= 0.0;
+
+        public static final double autoRotP = 0.0;
+        public static final double autoRotI= 0.0;
+        public static final double autoRotD= 0.0;
+        
+    } 
+    
+    
     public static class Module{
         
         public static final double driveRevsToMeters = 4 * Math.PI / (29.27 * 8.14) * 1.98; //revoluciones a metros (pendiente cambiar a la de nosotros)

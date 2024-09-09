@@ -19,7 +19,7 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 import com.kauailabs.navx.frc.*;
 
-public class Chassis extends SubsystemBase{
+public class Chassis extends SubsystemBase{ //incorporar los 4 modulos
 
     Module frontLeft, frontRight, rearLeft, rearRight;
 
@@ -37,7 +37,7 @@ public class Chassis extends SubsystemBase{
     SwerveDrivePoseEstimator poseEstimator;
     AHRS navx = new AHRS(SPI.Port.kMXP); //gyro
 
-    public Chassis(){
+    public Chassis(){ //inicializar los modulos
 
         frontLeft = new Module(Constants.Chassis.frontLeftDriveMotorPort, Constants.Chassis.frontLeftRotationMotorPort, Constants.Chassis.frontLeftCANcoderPort, Constants.Chassis.frontLeftKp, Constants.Chassis.frontLeftKi, Constants.Chassis.frontLeftKd); //parametros a cambiar
         frontRight = new Module(Constants.Chassis.frontRightDriveMotorPort, Constants.Chassis.frontRightRotationMotorPort, Constants.Chassis.frontRightCANcoderPort, Constants.Chassis.frontRightKp, Constants.Chassis.frontRightKi, Constants.Chassis.frontRightKd);

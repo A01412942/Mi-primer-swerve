@@ -1,3 +1,4 @@
+// By: Beatriz Marún 5959
 package frc.team5959.subsystems;
     
 import com.revrobotics.CANSparkMax;
@@ -29,7 +30,7 @@ public class Module {
         return new SwerveModulePosition(getDrivePosition(),getAngle());
     }
 
-    public void setDesiredState(SwerveModuleState desiredState){
+    public void setDesiredState(SwerveModuleState desiredState){  //toma un swerve state y hace que el modulo lo haga
 
         desiredState = SwerveModuleState.optimize(desiredState, getAngle());
 
