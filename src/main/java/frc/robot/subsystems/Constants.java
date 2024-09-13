@@ -1,5 +1,5 @@
 // By: Beatriz Marún 5959
-package frc.team5959.subsystems;
+package frc.robot.subsystems;
 
 //  =================
 //       Red CAN
@@ -27,16 +27,16 @@ public class Constants {
         public static final double robotRadius = 0.66; //metros, cambiar a elección
 
         //Modulos 
-        public static final double frontLeftTranslationX = -0.301625; //((29 in/2) - 2.625in)*0.0254 = 0.301625 metros
+        public static final double frontLeftTranslationX = 0.301625; //((29 in/2) - 2.625in)*0.0254 = 0.301625 metros
         public static final double frontLeftTranslationY = 0.301625;
 
         public static final double frontRightTranslationX = 0.301625;
-        public static final double frontRightTranslationY = 0.301625;
+        public static final double frontRightTranslationY = -0.301625;
 
         public static final double rearLeftTranslationX = -0.301625;
-        public static final double rearLeftTranslationY = -0.301625;
+        public static final double rearLeftTranslationY = 0.301625;
 
-        public static final double rearRightTranslationX = 0.301625;
+        public static final double rearRightTranslationX = -0.301625;
         public static final double rearRightTranslationY = -0.301625;
     
         public static final int frontLeftDriveMotorPort = 3;
@@ -54,27 +54,27 @@ public class Constants {
         public static final int rearLeftCANcoderPort = 13;
         public static final int rearRightCANcoderPort = 12;
 
-        public static final double frontLeftKp = 0.0;
+        public static final double frontLeftKp = 0.05;
         public static final double frontLeftKi = 0.0;
         public static final double frontLeftKd = 0.0;
 
-        public static final double frontRightKp = 0.0;
+        public static final double frontRightKp = 0.05;
         public static final double frontRightKi = 0.0;
         public static final double frontRightKd = 0.0;
 
-        public static final double rearLeftKp = 0.0;
+        public static final double rearLeftKp = 0.05;
         public static final double rearLeftKi = 0.0;
         public static final double rearLeftKd = 0.0;
 
-        public static final double rearRightKp = 0.0;
+        public static final double rearRightKp = 0.05;
         public static final double rearRightKi = 0.0;
         public static final double rearRightKd = 0.0;
         
-        public static final double driveKp = 0.0;
+        public static final double driveKp = 0.05;
         public static final double driveKi = 0.0;
         public static final double driveKd = 0.0;
         
-        public static final double rotationKp = 0.0;
+        public static final double rotationKp = 0.05;
         public static final double rotationKi = 0.0;
         public static final double rotationKd = 0.0;
     }

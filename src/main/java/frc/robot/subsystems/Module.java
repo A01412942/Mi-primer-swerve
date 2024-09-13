@@ -1,5 +1,5 @@
 // By: Beatriz Marún 5959
-package frc.team5959.subsystems;
+package frc.robot.subsystems;
     
 import com.revrobotics.CANSparkMax;
 import com.revrobotics.CANSparkLowLevel.MotorType;
